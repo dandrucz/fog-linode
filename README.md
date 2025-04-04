@@ -23,7 +23,7 @@ Or install it yourself as:
 ```ruby
 require 'fog/linode'
 
-compute = Fog::Compute.new(provider: :linode, linode_token: '<your LinodeAPIv4 access token>')
+compute = Fog::Compute.new(provider: :linode, [linode_url: '<alternative_linode_api_url>'], linode_token: '<your LinodeAPIv4 access token>')
 all_kernels = compute.kernels.all # Fetch all kernels from the Linode API
 kvm_kernels = compute.kernels.all(filters: { kvm: true }) # Fetch all KVM kernels from the Linode API
 kvm_kernels_page_2 = compute.kernels.all(page: 2, filters: { kvm: true }) # Fetch only the 2nd page of KVM kernels
@@ -48,7 +48,7 @@ server.tags = ['add', 'some', 'tags']
 server.save
 
 # Working with Linode Domains
-dns = Fog::DNS.new(provider: :linode, linode_token: '<your LinodeAPIv4 access token>')
+dns = Fog::DNS.new(provider: :linode, [linode_url: '<alternative_linode_api_url>'], linode_token: '<your LinodeAPIv4 access token>')
 all_domains = dns.domains.all # Load all Linode Domains on your account
 exsiting_domain = dns.domains.get(1234567890) # Load details for a single Linode Domain on your account
 

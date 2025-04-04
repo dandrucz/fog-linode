@@ -3,6 +3,7 @@ module Fog
     # Fog service class for Linode Compute service
     class Compute < Fog::Service
       requires :linode_token
+      requires :linode_url
 
       request_path 'fog/linode/compute/requests'
       request :list_types

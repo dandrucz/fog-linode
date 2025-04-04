@@ -12,7 +12,7 @@ module Fog
         }
 
         add_user_agents(options[:user_agents])
-        @connection = Fog::Core::Connection.new('https://api.linode.com',
+        @connection = Fog::Core::Connection.new(options[:linode_url] || 'https://api.linode.com',
                                                 options[:persistent],
                                                 request_defaults)
       end

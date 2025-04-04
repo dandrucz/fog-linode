@@ -13,6 +13,7 @@ describe Fog::Linode::Compute do
     let(:connection) do
       Fog::Compute.new(
         provider: :linode,
+        linode_url: ENV['LINODE_URL'] || 'https://api.linode.com',
         linode_token: ENV['LINODE_TOKEN'] || 'fake_token'
       )
     end
