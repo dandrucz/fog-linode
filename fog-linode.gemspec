@@ -5,8 +5,8 @@ require 'fog/linode/version'
 Gem::Specification.new do |spec|
   spec.name          = 'fog-linode'
   spec.version       = Fog::Linode::VERSION
-  spec.authors       = ['Charles Treatman']
-  spec.email         = ['charles.treatman@gmail.com']
+  spec.authors       = ['Charles Treatman', 'David Andruczyk']
+  spec.email         = ['charles.treatman@gmail.com', 'dandruczyk@gmail.com']
 
   spec.summary       = "Module for the 'fog' gem to support Linode cloud services."
   spec.description   = "This library can be used as a module for 'fog' or as standalone provider

@@ -3,7 +3,6 @@ module Fog
     # Fog service class for Linode DNS service
     class DNS < Fog::Service
       requires :linode_token
-      requires :linode_url
 
       request_path 'fog/linode/dns/requests'
       request :create_domain
